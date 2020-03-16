@@ -21,7 +21,6 @@ class ProfileController extends Controller
     public function index()
     {
         $profile = Profile::orderBy('id', 'asc')->get();
-        dd($profile->toArray());
         return view('profile.index', ['profile' => $profile]);
     }
 }
