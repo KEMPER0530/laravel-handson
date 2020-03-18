@@ -3,9 +3,9 @@
 @section('content')
     <div class="container">
         <div class="row">
-            <div class="col col-md-offset-3 col-md-6">
+            <div class="col-md-6 offset-md-3">
                 <nav class="panel panel-default">
-                    <div class="panel-heading">プロフィールを編集する</div>
+                    <div class="panel-heading"></div>
                     <div class="panel-body">
                         @if($errors->any())
                         <div class="alert alert-danger">
@@ -14,18 +14,19 @@
                             @endforeach
                         </div>
                         @endif
-                        <form method="POST" action="{{ action('ProfileController@update', $profile) }}">
+                        <form method="POST" action="{{ url('/maintenance/profile', $profile->id) }}">
                             {{ csrf_field() }}
+                            {{ method_field('patch') }}
                             <div class="form-group">
-                                <label for="profile_id">ID</label>
-                                <input type="text" class="form-control" name="profile_id" id="profile_id" value="{{ old('profile_id') }}" />
+                                <label for="id">ID</label>
+                                <input type="text" class="form-control block-center" name="id" id="id" value="{{ old('profile_id',$profile->id) }}" />
                             </div>
                             <div class="form-group">
-                                <label for="lastdate">更新日</label>
-                                <input type="text" class="form-control" name="lastdate" id="lastdate" value="{{ old('lastdate') }}" />
+                                <label for="history">変更内容</label>
+                            <textarea class="form-control" name="history" id="history">{{ old('lastdate',$profile->history) }}</textarea>
                             </div>
                             <div class="text-right">
-                                <button type="submit" class="btn btn-primary">送信</button>
+                                <button type="submit" class="btn btn-primary">編集</button>
                             </div>
                         </form>
                     </div>
