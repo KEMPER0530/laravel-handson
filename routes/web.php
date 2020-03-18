@@ -23,7 +23,14 @@ Auth::routes();
 
 Route::apiResource('/api/mailsendrslt', 'MailsendrsltController');
 Route::get('/maintenance/home', 'HomeController@index')->name('home');
+
 Route::get('/maintenance/profile', 'ProfileController@index')->name('profile');
+Route::get('/maintenance/profile/create', 'ProfileController@create');
+Route::get('/maintenance/profile/store', 'ProfileController@store');
+Route::get('/maintenance/{profile}/edit', 'ProfileController@edit');
+Route::get('/maintenance/{profile}', 'ProfileController@update');
+Route::get('/maintenance/{profile}', 'ProfileController@destroy');
+
 Route::get('/maintenance/work', 'WorkController@index')->name('work');
 Route::get('/maintenance/card', 'CrdcardinfoController@index')->name('card');
 Route::get('/maintenance/logininfo', 'LogininfoController@index')->name('logininfo');

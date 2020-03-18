@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-light navbar-laravel bg-pink">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/maintenance') }}">
                     {{ config('app.name', 'Laravel') }}

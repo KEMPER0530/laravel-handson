@@ -23,4 +23,10 @@ class ProfileController extends Controller
         $profile = Profile::orderBy('id', 'asc')->get();
         return view('profile.index', ['profile' => $profile]);
     }
+
+    public function edit(Profile $profile)
+    {
+        dd($profile->toArray());
+        return view('profile.edit')->with('profile', $profile);
+    }
 }

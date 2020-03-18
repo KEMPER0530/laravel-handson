@@ -21,7 +21,6 @@ class WorkController extends Controller
     public function index()
     {
         $work = Work::orderBy('work_id', 'asc')->get();
-        dd($work->toArray());
         return view('work.index', ['work' => $work]);
     }
 }
