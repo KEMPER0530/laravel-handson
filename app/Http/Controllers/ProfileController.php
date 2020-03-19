@@ -40,14 +40,24 @@ class ProfileController extends Controller
         $profile->save();
         return redirect('/maintenance/profile');
     }
-    public function create(Profile $profile)
+    public function create()
     {
-        dd($profile->toArray());
+        return view('profile.create');
     }
     public function destroy(Profile $profile)
     {
         //dd($profile->toArray());
         $profile->delete();
+        return redirect('/maintenance/profile');
+    }
+    public function store(ProfileRequest $request)
+    {
+        $profile = new Profile();
+        $profile->id = $request->id;
+        date_default_timezone_set('Asia/Tokyo');
+        $profile->lastdate = date("Y/m/t");
+        $profile->history = $request->history;
+        $profile->save();
         return redirect('/maintenance/profile');
     }
 }

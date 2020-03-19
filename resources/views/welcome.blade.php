@@ -72,9 +72,15 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                @auth
+                    <div class="title m-b-md">
+                        Menu
+                    </div>
+                @else
+                    <div class="title m-b-md">
+                        Admin site
+                    </div>
+                @endauth
                 <div class="links">
                     @auth
                         <a href="{{ url('/maintenance/home') }}">Home</a>

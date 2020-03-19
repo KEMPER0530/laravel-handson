@@ -14,19 +14,18 @@
                             @endforeach
                         </div>
                         @endif
-                        <form method="POST" action="{{ url('/maintenance/profile', $profile->id) }}">
+                        <form method="POST" action="{{ url('/maintenance/profile/store') }}">
                             {{ csrf_field() }}
-                            {{ method_field('patch') }}
                             <div class="form-group">
                                 <label for="id">ID</label>
-                                <input type="text" class="form-control block-center" name="id" id="id" value="{{ old('id',$profile->id) }}" />
+                                <input type="text" class="form-control block-center" name="id" id="id" value="{{ old('id') }}" />
                             </div>
                             <div class="form-group">
                                 <label for="history">変更内容</label>
-                            <textarea class="form-control" name="history" id="history">{{ old('history',$profile->history) }}</textarea>
+                                <textarea class="form-control" name="history" id="history">{{ old('history') }}</textarea>
                             </div>
                             <div class="text-right">
-                                <button type="submit" class="btn btn-primary">編集</button>
+                                <button type="submit" class="btn btn-primary">登録</button>
                             </div>
                         </form>
                     </div>

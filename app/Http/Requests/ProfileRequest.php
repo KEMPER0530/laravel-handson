@@ -23,10 +23,15 @@ class ProfileRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'id' => 'required',
-            'history' => 'required',
+        if ($this -> id) { // 編集画面の時
+            $unique = 'unique:profile,id,' . $this -> id . ',id';
+        } else { // 新規登録画面の時
+            $unique = 'unique:profile,id';
+        }
 
+        return [
+            'id' => 'required|' . $unique,
+            'history' => 'required',
         ];
     }
 
