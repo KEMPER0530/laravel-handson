@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -62,6 +62,8 @@
                 margin-bottom: 30px;
             }
         </style>
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
     </head>
     <body>
         <div class="flex-center position-ref full-height">
@@ -72,17 +74,23 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
+                @auth
+                    <div class="title m-b-md">
+                        Maintenance <br>Menu
+                    </div>
+                @else
+                    <div class="title m-b-md">
+                        akazawa portfolio <br>Admin site
+                    </div>
+                @endauth
                 <div class="links">
                     @auth
                         <a href="{{ url('/maintenance/home') }}">Home</a>
                         <a href="{{ url('/maintenance/profile') }}">Profile</a>
                         <a href="{{ url('/maintenance/work') }}">Work</a>
-                        <a href="{{ url('/maintenance/card') }}">Card</a>
+                        <a href="{{ url('/maintenance/crdcardinfo') }}">Card</a>
                         <a href="{{ url('/maintenance/logininfo') }}">User</a>
-                        <a href="{{ url('/maintenance/tmpuserinfo') }}">TmpUser</a>
+                        <a href="{{ url('/maintenance/tmpuserinfo') }}">Temporary user</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 

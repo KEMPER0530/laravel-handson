@@ -8,5 +8,6 @@ class Profile extends Model
 {
     //
     protected $table = 'profile';
-    protected $fillable = ['id', 'heading','lastdate','history','imageutl','updated_at'];
+    protected $fillable = ['lastdate', 'history', 'updated_at'];
+    const CREATED_AT = null;
 }

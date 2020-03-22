@@ -12,4 +12,9 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css');
+mix.js('resources/js/main.js', 'public/js');
+mix.js('resources/js/creditly.js', 'public/js')
+    .sass('resources/sass/creditly.scss', 'public/css');
+mix.js('resources/js/error.js', 'public/js')
+    .sass('resources/sass/error.scss', 'public/css');
