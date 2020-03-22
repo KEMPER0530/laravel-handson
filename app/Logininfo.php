@@ -8,5 +8,6 @@ class Logininfo extends Model
 {
     //
     protected $table = 'login_info';
-    protected $fillable = ['username','password','name','updated_at'];
+    protected $fillable = ['username', 'password', 'name', 'updated_at'];
+    const CREATED_AT = null;
 }

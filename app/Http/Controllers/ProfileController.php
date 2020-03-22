@@ -27,7 +27,6 @@ class ProfileController extends Controller
 
     public function edit(Profile $profile)
     {
-        // dd($profile->toArray());
         return view('profile.edit')->with('profile', $profile);
     }
 
@@ -35,18 +34,18 @@ class ProfileController extends Controller
     {
         $profile->id = $request->id;
         date_default_timezone_set('Asia/Tokyo');
-        $profile->lastdate = date("Y/m/t");
+        $profile->lastdate = date("Y/m/d");
         $profile->history = $request->history;
         $profile->save();
         return redirect('/maintenance/profile');
     }
     public function create()
     {
-        return view('profile.create');
+        $maxUserId = Profile::max('id') + 1;
+        return view('profile.create', compact('maxUserId'));
     }
     public function destroy(Profile $profile)
     {
-        //dd($profile->toArray());
         $profile->delete();
         return redirect('/maintenance/profile');
     }

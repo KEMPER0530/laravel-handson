@@ -49478,15 +49478,39 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/creditly.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/creditly.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ "./resources/sass/error.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/error.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!*************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ***!
-  \*************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/creditly.scss ./resources/sass/error.scss ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! /Users/yoshi_akazawa_sto/education/laravel/laravel-handson/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/yoshi_akazawa_sto/education/laravel/laravel-handson/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/yoshi_akazawa_sto/education/laravel/laravel-handson/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/yoshi_akazawa_sto/education/laravel/laravel-handson/resources/sass/creditly.scss */"./resources/sass/creditly.scss");
+module.exports = __webpack_require__(/*! /Users/yoshi_akazawa_sto/education/laravel/laravel-handson/resources/sass/error.scss */"./resources/sass/error.scss");
 
 
 /***/ })

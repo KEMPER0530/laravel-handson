@@ -1,5 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/css/creditly.css": "/css/creditly.css",
+    "/css/error.css": "/css/error.css",
+    "/js/creditly.js": "/js/creditly.js",
+    "/js/error.js": "/js/error.js",
     "/js/main.js": "/js/main.js"
 }

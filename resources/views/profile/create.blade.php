@@ -18,7 +18,7 @@
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="id">ID</label>
-                                <input type="text" class="form-control block-center" name="id" id="id" value="{{ old('id') }}" />
+                                <input type="text" class="form-control block-center" name="id" id="id" value="{{ $maxUserId }}" readonly/>
                             </div>
                             <div class="form-group">
                                 <label for="history">変更内容</label>

@@ -81,67 +81,41 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/main.js":
-/*!******************************!*\
-  !*** ./resources/js/main.js ***!
-  \******************************/
+/***/ "./resources/js/creditly.js":
+/*!**********************************!*\
+  !*** ./resources/js/creditly.js ***!
+  \**********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-(function () {
-  'use strict';
+$(document).ready(function () {
+  var i_card = document.getElementById('cardnumber');
 
-  var cmds = document.getElementsByClassName('del');
-  var i;
-
-  for (i = 0; i < cmds.length; i++) {
-    cmds[i].addEventListener('click', function (e) {
-      e.preventDefault();
-
-      if (confirm('削除します。よろしいですか?')) {
-        document.getElementById('form_' + this.dataset.id).submit();
-      }
+  if (i_card != null) {
+    i_card.addEventListener('input', function (e) {
+      var digits = e.target.value.replace(/[^0-9]/g, '');
+      e.target.value = _.chunk(digits, 4).map(function (a) {
+        return a.join('');
+      }).join(' ');
     });
   }
-})();
-
-$(document).ready(function () {
-  // チェック状態の初期値取得
-  var ck_state = $('#ref').val();
-
-  if (ck_state === '1') {
-    $('#ref').prop('checked', true);
-  } else {
-    $('#ref').prop('checked', false);
-  }
-
-  $('#ref').click(function () {
-    //チェックボックスのチェック状態を取得する
-    var result = $('#ref').prop('checked'); //チェック状態のバリュー値を設定する
-
-    if (result) {
-      $('#ref').val('1');
-    } else {
-      $('#ref').val('0');
-    }
-  });
-});
+}, false);
 
 /***/ }),
 
-/***/ 1:
-/*!************************************!*\
-  !*** multi ./resources/js/main.js ***!
-  \************************************/
+/***/ 2:
+/*!****************************************!*\
+  !*** multi ./resources/js/creditly.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/yoshi_akazawa_sto/education/laravel/laravel-handson/resources/js/main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! /Users/yoshi_akazawa_sto/education/laravel/laravel-handson/resources/js/creditly.js */"./resources/js/creditly.js");
 
 
 /***/ })

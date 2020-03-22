@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ProfileRequest extends FormRequest
+class CrdcardinfoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,16 +24,16 @@ class ProfileRequest extends FormRequest
     public function rules()
     {
         return [
-            'id' => 'required|numeric',
-            'history' => 'required|string',
+            'cardnumber' => 'required',
+            'cardname' => 'required|regex:(^[A-Z][A-Z]+ [A-Z]+$)',
+            'cardmonth' => 'required|not_in: 0',
+            'cardyear' => 'required|not_in: 0',
+            'cardcvv' => 'digits_between:3,4',
         ];
     }
 
     public function message()
     {
-        return [
-            'id.required' => 'please enter id!!!',
-            'history.required' => 'please enter 変更内容!!!'
-        ];
+        return [];
     }
 }
