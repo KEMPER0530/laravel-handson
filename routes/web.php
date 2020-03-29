@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return redirect('/maintenance');
-});
-
 Route::get('/maintenance', function () {
     return view('welcome');
 });
