@@ -11,9 +11,9 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <script src="{{ asset('/js/main.js') }}" defer></script>
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="{{ asset('/js/creditly.js') }}" defer></script>
+    <script src="{{ asset('js/main.js') }}" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="{{ asset('js/creditly.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -24,7 +24,7 @@
     <link href="{{ asset('css/creditly.css') }}" rel="stylesheet">
 
     <!-- favicon -->
-    <link rel="shortcut icon" href="{{ asset('/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
 </head>
 <body>
     <div id="app">
