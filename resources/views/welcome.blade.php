@@ -80,7 +80,7 @@
                     </div>
                 @else
                     <div class="title m-b-md">
-                        akazawa portfolio <br>Admin site
+                        akazawa portfolio <br>admin site
                     </div>
                 @endauth
                 <div class="links">
@@ -91,6 +91,7 @@
                         <a href="{{ url('/maintenance/crdcardinfo') }}">Card</a>
                         <a href="{{ url('/maintenance/logininfo') }}">User</a>
                         <a href="{{ url('/maintenance/tmpuserinfo') }}">Temporary user</a>
+                        <a href="{{ url('/maintenance/accesslog') }}">Accesslog</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
 

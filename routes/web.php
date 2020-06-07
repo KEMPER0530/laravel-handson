@@ -53,3 +53,9 @@ Route::get('/maintenance/tmpuserinfo', 'TmpuserinfoController@index')->name('tmp
 Route::get('/maintenance/tmpuserinfo/{tmpuserinfo}/edit', 'TmpuserinfoController@edit');
 Route::patch('/maintenance/tmpuserinfo/{tmpuserinfo}', 'TmpuserinfoController@update');
 Route::delete('/maintenance/tmpuserinfo/{tmpuserinfo}', 'TmpuserinfoController@destroy');
+
+// アクセスログのルーター
+Route::get('/maintenance/accesslog', 'AccesslogController@index')->name('accesslog');
+Route::get('/maintenance/accesslog/{accesslog}/edit', 'AccesslogController@edit');
+Route::patch('/maintenance/accesslog/{accesslog}', 'AccesslogController@update');
+Route::delete('/maintenance/accesslog/{accesslog}', 'AccesslogController@destroy');
