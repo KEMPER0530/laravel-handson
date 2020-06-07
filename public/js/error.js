@@ -113,7 +113,7 @@ events.forEach(function (e) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/yoshi_akazawa_sto/education/laravel/laravel-handson/resources/js/error.js */"./resources/js/error.js");
+module.exports = __webpack_require__(/*! /Users/yoshi_akazawa_sto/education/laravel/php/laravel-handson/resources/js/error.js */"./resources/js/error.js");
 
 
 /***/ })

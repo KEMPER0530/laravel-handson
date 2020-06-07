@@ -141,7 +141,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/yoshi_akazawa_sto/education/laravel/laravel-handson/resources/js/main.js */"./resources/js/main.js");
+module.exports = __webpack_require__(/*! /Users/yoshi_akazawa_sto/education/laravel/php/laravel-handson/resources/js/main.js */"./resources/js/main.js");
 
 
 /***/ })

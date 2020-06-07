@@ -54,7 +54,7 @@ class ProfileController extends Controller
         $profile = new Profile();
         $profile->id = $request->id;
         date_default_timezone_set('Asia/Tokyo');
-        $profile->lastdate = date("Y/m/t");
+        $profile->lastdate = date("Y/m/d");
         $profile->history = $request->history;
         $profile->save();
         return redirect('/maintenance/profile');
